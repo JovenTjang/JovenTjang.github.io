@@ -1,0 +1,29 @@
+<model-viewer src="A2_DesVis.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.jpeg" shadow-intensity="1" animation-name="ArmatureAction" camera-orbit="0.4145deg 80.8deg 1.488m" field-of-view="30deg">
+    <button class="Hotspot" slot="hotspot-1" data-surface="5 5 135 136 137 0.139 0.672 0.190" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Head
+        </div>
+    </button><button class="Hotspot" slot="hotspot-6" data-surface="7 0 1632 1633 1634 0.420 0.500 0.080" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Right arm
+        </div>
+    </button><button class="Hotspot" slot="hotspot-7" data-surface="6 0 6750 6751 6752 0.479 0.370 0.150" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Left arm
+        </div>
+    </button><button class="Hotspot" slot="hotspot-8" data-surface="10 0 510 511 512 0.371 0.030 0.599" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Body
+        </div>
+    </button><button class="Hotspot" slot="hotspot-9" data-surface="0 0 9 10 11 0.488 0.262 0.249" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Legs
+        </div>
+    </button><button class="Hotspot" slot="hotspot-10" data-surface="11 0 57 58 59 0.366 0.596 0.038" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Phone</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="A2_DesVis.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.jpeg" shadow-intensity="1" animation-name="ArmatureAction" camera-orbit="0.4145deg 80.8deg 1.488m" field-of-view="30deg" id="penguin">
+      <button class="Hotspot" slot="hotspot-1" data-surface="5 5 135 136 137 0.139 0.672 0.190" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Head
+          </div>
+      </button><button class="Hotspot" slot="hotspot-6" data-surface="7 0 1632 1633 1634 0.420 0.500 0.080" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Right arm
+          </div>
+      </button><button class="Hotspot" slot="hotspot-7" data-surface="6 0 6750 6751 6752 0.479 0.370 0.150" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Left arm
+          </div>
+      </button><button class="Hotspot" slot="hotspot-8" data-surface="10 0 510 511 512 0.371 0.030 0.599" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Body
+          </div>
+      </button><button class="Hotspot" slot="hotspot-9" data-surface="0 0 9 10 11 0.488 0.262 0.249" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Legs
+          </div>
+      </button><button class="Hotspot" slot="hotspot-10" data-surface="11 0 57 58 59 0.366 0.596 0.038" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Phone</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    <div class="controls" style="position:absolute; bottom: 0px; left:200px">
+    <div>Variant:
+
+      <button onClick="VBtn01()">01</button>
+      <button onClick="VBtn02()">02</button>
+      <button onClick="VBtn03()">03</button>
+      </div>
+    </div>
+
+    <div class="controls" style="position: absolute; bottom: 0px; right: 200px">
+    <div>Animation:
+    <button id="default1Btn" onClick="Btn01()">Play
+    Animation 01</button>
+    <button id="default2Btn" onClick="Btn02()">Play
+    Animation 02</button>
+    <button id="default3Btn" onClick="Btn03()">Play
+    Animation 03</button>
+    <button id="default4Btn" onClick="Btn04()">Play
+    Animation 04</button>
+    <button id="default5Btn" onClick="Btn05()">Play
+    Animation 05</button>
+    <button id="default6Btn" onClick="Btn06()">Play
+    Animation 06</button>
+    <button id="default7Btn" onClick="pauseAnimation()">Pause Animation</button>
+    </div>
+</div>
+
+
+
+
+
+    </model-viewer>  
+
+
+
+    <script>
+          function VBtn01(){
+          document.getElementById('penguin').variantName='v1';
+        }
+        function VBtn02(){
+          document.getElementById('penguin').variantName='v2';
+        }
+        function VBtn03(){
+          document.getElementById('penguin').variantName='v3';
+        }
+    </script>
+    
+    </script>
+     
+
+        
+     
+             
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    
+
+  
+
+  <script>
+    function Btn01() {
+      const viewer = document.getElementById('penguin');
+      viewer.animationName = 'ArmatureAction'; 
+      viewer.play();
+    }
+   function Btn02() {
+      const viewer = document.getElementById('penguin');
+      viewer.animationName = 'ArmatureAction.001'; 
+      viewer.play();
+    }
+    function Btn03() {
+      const viewer = document.getElementById('penguin');
+      viewer.animationName = 'ArmatureAction.002'; 
+      viewer.play();
+    }
+    function Btn04() {
+      const viewer = document.getElementById('penguin');
+      viewer.animationName = 'ArmatureAction.003'; 
+      viewer.play();
+    }
+    function Btn05() {
+      const viewer = document.getElementById('penguin');
+      viewer.animationName = 'ArmatureAction.004'; 
+      viewer.play();
+    }
+    function Btn06() {
+      const viewer = document.getElementById('penguin');
+      viewer.animationName = 'ArmatureAction.005'; 
+      viewer.play();
+    }
+    function pauseAnimation(){
+    document.getElementById('penguin').pause();
+
+
+    }
+
+  </script>
+
+
+    
+    
+
+             
+        
+
+             
+    
+             
+  </body>
+</html>
